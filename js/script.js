@@ -60,8 +60,8 @@ fetch('https://dummyjson.com/products/category/smartphones')
       raitingBox.appendChild(itemRating);
 
       // Images of Raiting
-      const filledStar = '/images/orange-star.svg';
-      const emptyStar = '/images/grey-star.svg';
+      const filledStar = './images/orange-star.svg';
+      const emptyStar = './images/grey-star.svg';
       const addEmptyStar = () => {
         const emptyStarElement = document.createElement('img');
         emptyStarElement.classList.add('star');
