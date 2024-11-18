@@ -28,8 +28,8 @@ body {
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  padding: 2.2rem 0;
+  justify-content: space-between;
+  padding: 2.2rem 4rem;
   z-index: 100;
 }
 
