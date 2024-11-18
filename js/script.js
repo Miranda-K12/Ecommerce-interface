@@ -112,7 +112,9 @@ fetch('https://dummyjson.com/products/category/smartphones')
       Itemcontainer.appendChild(itemBox);
     });
   })
-  .catch((error) => {
-    const errorMessage = document.querySelector('.error-message');
-    errorMessage.style.display = 'block';
+  .catch(() => {
+    setTimeout(() => {
+        const errorMessage = document.querySelector('.error-message');
+        errorMessage.style.display = 'block';
+    }, 2000); 
 });
