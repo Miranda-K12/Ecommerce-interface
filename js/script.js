@@ -118,3 +118,4 @@ fetch('https://dummyjson.com/products/category/smartphones')
         errorMessage.style.display = 'block';
     }, 2000); 
 });
+
