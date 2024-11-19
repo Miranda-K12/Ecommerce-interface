@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <title>Ecommerce-interface</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/colors.css">
@@ -49,8 +48,8 @@
       <p>Verified only</p>
     <select id="sort" name="sort" required>
       <option value="" disabled selected>Featured</option>
-      <option value="1">Sort by Price</option>
-      <option value="2">Sort by Name</option>
+      <option value="1" class="sort-price">Sort by Price</option>
+      <option value="2" class="sort-name">Sort by Name</option>
 </select>
               <img src="images/sort-icon.png" alt="sort-icon">
               <img src="images/menu-icon.svg" alt="menu-icon">
@@ -58,6 +57,8 @@
   </div>
   <div class="item-container">
     </div>
+      <div class="pagination">
+  </div>
      <div class="error-message">Something Went Wrong!</div>
   </div>
 <div class="contact-section">
