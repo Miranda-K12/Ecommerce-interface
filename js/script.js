@@ -1,4 +1,41 @@
-//Header
+
+'use strict';
+//Burger menu
+const hamburger = document.getElementById('hamburger');
+const burgerMenu = document.getElementById('burger-menu');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    burgerMenu.classList.toggle('active'); 
+});
+
+/*Smooth Scrolling */
+function smoothScroll() {
+    const links = document.querySelectorAll('a:link'); 
+    links.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            const href = link.getAttribute("href"); 
+            if (href === "#") {
+                e.preventDefault(); 
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
+            } 
+            else if (href.startsWith("#")) {
+                e.preventDefault();
+                const section = document.querySelector(href); 
+                if (section) { 
+                    section.scrollIntoView({
+                        behavior: "smooth" 
+                    });
+                }
+            }
+        });
+    });
+}
+smoothScroll();
+//Header color change
 const header = document.querySelector('.header');
 const changeBackground = function(){
   window.scrollY > 50? header.classList.add('changed') : header.classList.remove('changed');

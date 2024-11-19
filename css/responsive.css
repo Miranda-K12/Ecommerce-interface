@@ -39,12 +39,32 @@
   .apps-colums {
     display: none;
   }
+
+  .hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .burger-menu.active {
+    display: flex;
+  }
 }
 
 @media (max-width: 520px) {
   .header .logo {
     width: 10rem;
     height: auto;
+  }
+
+  .burger-menu {
+    width: 60%;
   }
 
   .sort-wrapper-elements {

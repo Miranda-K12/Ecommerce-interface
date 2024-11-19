@@ -12,7 +12,8 @@
 <body>
 <header class="header">
   <div class="logo">
-    <img src="images/logo-colored.svg" alt="company-logo">
+    <a href="index.html">
+    <img src="images/logo-colored.svg" alt="company-logo"></a>
   </div>
   <div class="search">
     <input type="text" class="search-input" name="search" placeholder="Search">
@@ -39,6 +40,17 @@
       <p>My cart</p>
     </div>
   </div>
+ <div class="hamburger" id="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <div class="burger-menu" id="burger-menu">
+        <a class="burger-list" href="#home">Home</a>
+        <a class="burger-list" href="#item-container">Our Products</a>
+        <a class="burger-list" href="#contact">Contact</a>
+    </div>
+
 </header>
   <div class="container">
 <div class="product-wrapper">
@@ -58,13 +70,13 @@
               <img src="images/menu-icon.svg" alt="menu-icon">
     </div></div>
   </div>
-  <div class="item-container">
+  <div class="item-container" id="item-container">
     </div>
       <div class="pagination">
   </div>
      <div class="error-message">Something Went Wrong!</div>
   </div>
-<div class="contact-section">
+<div class="contact-section" id="contact">
   <div class="contact-text">
   <h3>Subscribe on our newsletter</h3>
   <p>Get daily news on upcoming offers from many suppliers all over the world</p>
