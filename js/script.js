@@ -83,6 +83,7 @@ function drawItems(products) {
     ratingBox.classList.add('rating-box');
     ratingBox.appendChild(itemStars);
     ratingBox.appendChild(itemRating);
+    ratingBox.style.display
 
     const filledStar = './images/orange-star.svg';
     const emptyStar = './images/grey-star.svg';

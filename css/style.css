@@ -19,18 +19,17 @@ body {
   max-width: 144rem;
   width: 100%;
   margin: 0 auto;
-  margin: 0 auto;
-  margin-top: 8.6rem;
 }
 
 /*Header*/
 .header {
-  width: 100%;
-  position: fixed;
-  top: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
   padding: 2.2rem 4rem;
   z-index: 100;
   opacity: 0;
@@ -42,8 +41,12 @@ body {
 }
 
 .header .logo {
-  width: 15rem;
-  height: 4.6rem;
+  max-width: 15rem;
+  height: auto;
+}
+
+.header .logo img {
+  width: 100%;
 }
 
 .header .search {
@@ -59,7 +62,8 @@ body {
 }
 
 .header .search-input {
-  width: 42rem;
+  max-width: 42rem;
+  width: 50%;
   height: 4rem;
   height: 100%;
   border-radius: 6px;
@@ -143,6 +147,7 @@ body {
   padding: 2.3rem 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .sort-wrapper p {
@@ -176,6 +181,11 @@ input[type="checkbox"] {
   color: var(--color-dark);
 }
 
+.element-box {
+  align-items: center;
+  display: flex;
+}
+
 select {
   padding: 1rem;
   border: 1px solid var(--color-grey-300);
@@ -206,6 +216,7 @@ select {
   cursor: pointer;
   animation: zooming 1s ease;
   background-color: transparent;
+  height: auto;
 }
 
 .item-box:hover {
@@ -222,7 +233,7 @@ select {
   background-repeat: no-repeat;
   clip-path: inset(0% 27.5% 1% 27%);
   margin-bottom: 3.3rem;
-
+  margin: 0 auto;
 }
 
 .item-price {
@@ -285,6 +296,10 @@ select {
   font-weight: 600;
 }
 
+.rating-box {
+  display: flex;
+  gap: 6.8rem;
+}
 
 /*Contact Section*/
 .contact-section {
@@ -297,14 +312,19 @@ select {
   margin-top: 16.7rem;
 }
 
-.contact-section h3 {
+.contact-text {
+  text-align: center;
+  width: 90%;
+}
+
+.contact-section .contact-text h3 {
   font-size: 2rem;
   font-weight: 600;
   line-height: 2.8rem;
   color: var(--color-dark);
 }
 
-.contact-section p {
+.contact-section .contact-text p {
   font-size: 1.6rem;
   line-height: 2.4rem;
   color: var(--color-gray-600);
@@ -333,7 +353,7 @@ select {
 .contact-section input {
   border: 1px solid var(--color-grey-300);
   border-radius: 6px;
-  width: 27.4rem;
+  max-width: 27.4rem;
   padding: 1.1rem 0;
   padding-left: 3.6rem;
 }

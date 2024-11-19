@@ -1,0 +1,73 @@
+/*Below 1024ox*/
+@media (max-width: 1024px) {
+
+  .brand-info,
+  .header .search {
+    display: none;
+  }
+
+  .item-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header .user-container {
+    display: none;
+  }
+
+  .sort-wrapper {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .footer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    gap: 2.4rem;
+  }
+
+  .item-container {
+    grid-template-columns: 1fr;
+  }
+
+  .item-img {
+    margin: 0 auto;
+  }
+
+  .apps-colums {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .header .logo {
+    width: 10rem;
+    height: auto;
+  }
+
+  .sort-wrapper-elements {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .contact-section {
+    margin-top: 12.4rem;
+  }
+
+  .contact-section .contact-text h3 {
+    font-size: 1.6rem;
+  }
+
+  .contact-section .contact-text p {
+    font-size: 1.4rem;
+  }
+
+  .footer-column p,
+  .footer-container p,
+  .footer-column ul li {
+    font-size: 1.4rem;
+  }
+
+}
