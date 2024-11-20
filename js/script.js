@@ -11,23 +11,17 @@ hamburger.addEventListener('click', () => {
 
 /*Smooth Scrolling */
 function smoothScroll() {
-    const links = document.querySelectorAll('a:link'); 
+    const links = document.querySelectorAll('a[href^="#"]'); 
     links.forEach(function (link) {
         link.addEventListener('click', function (e) {
-            const href = link.getAttribute("href"); 
-            if (href === "#") {
+            const href = link.getAttribute("href");
+
+            if (href.startsWith("#")) {
                 e.preventDefault(); 
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth",
-                });
-            } 
-            else if (href.startsWith("#")) {
-                e.preventDefault();
                 const section = document.querySelector(href); 
-                if (section) { 
+                if (section) {
                     section.scrollIntoView({
-                        behavior: "smooth" 
+                        behavior: "smooth", 
                     });
                 }
             }
@@ -54,7 +48,7 @@ fetch('https://dummyjson.com/products/category/smartphones')
   .then(data => {
     productData = data.products;
     drawItems(productData); 
-    
+
     //Sort Elements
     sortSelect.addEventListener('change', (e) => {
       const selectedValue = e.target.value;
@@ -77,7 +71,7 @@ fetch('https://dummyjson.com/products/category/smartphones')
 
 // Drawing Items Function
 function drawItems(products) {
-  itemContainer.innerHTML = ''; // Clear existing items before drawing new ones
+  itemContainer.innerHTML = ''; 
   products.forEach((product, index) => {
     const itemBox = document.createElement('div');
     itemBox.classList.add('item-box');
@@ -120,7 +114,6 @@ function drawItems(products) {
     ratingBox.classList.add('rating-box');
     ratingBox.appendChild(itemStars);
     ratingBox.appendChild(itemRating);
-    ratingBox.style.display
 
     const filledStar = './images/orange-star.svg';
     const emptyStar = './images/grey-star.svg';
