@@ -9,6 +9,10 @@
   .item-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .pagination {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -55,6 +59,14 @@
   .burger-menu.active {
     display: flex;
   }
+
+  .pagination {
+    display: none;
+  }
+
+  .contact-section {
+    margin-top: 10.7rem;
+  }
 }
 
 @media (max-width: 520px) {
@@ -73,7 +85,7 @@
   }
 
   .contact-section {
-    margin-top: 12.4rem;
+    margin-top: 5.7rem;
   }
 
   .contact-section .contact-text h3 {

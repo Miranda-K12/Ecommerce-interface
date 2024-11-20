@@ -170,3 +170,4 @@ function drawItems(products) {
     itemContainer.appendChild(itemBox);
   });
 }
+

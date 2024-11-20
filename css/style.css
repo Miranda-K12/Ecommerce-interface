@@ -8,6 +8,7 @@
 
 html {
   font-size: 62.8%;
+  margin: 0;
 }
 
 body {
@@ -30,11 +31,13 @@ body {
   position: sticky;
   top: 0;
   left: 0;
+  right: 0;
   padding: 2.2rem 4rem;
   z-index: 100;
   opacity: 0;
   animation: fadeIn 2s ease-out 1s forwards;
 }
+
 
 .header.changed {
   background-color: var(--color-grey-200);
@@ -65,7 +68,6 @@ body {
   max-width: 42rem;
   width: 50%;
   height: 4rem;
-  height: 100%;
   border-radius: 6px;
   border: none;
   padding: 1.1rem 0.5rem 1rem 1rem;
@@ -93,7 +95,6 @@ body {
   width: 14.5rem;
   height: 4rem;
   color: var(--color-dark);
-
 }
 
 .header .search-btn {
@@ -238,6 +239,10 @@ select {
   display: flex;
 }
 
+.hamburger {
+  display: none;
+}
+
 .hamburger.active .bar:nth-child(1) {
   transform: rotate(45deg);
   top: 10px;
@@ -359,6 +364,49 @@ select {
 .rating-box {
   display: flex;
   gap: 6.8rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.6rem;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+
+.pagination .pagination-img {
+  border: 1px solid var(--color-grey-300);
+  width: 4.4rem;
+  height: 4rem;
+}
+
+.pagination .item-numbers {
+  display: flex;
+  gap: 1.9rem;
+  align-items: center;
+  border-radius: 6px;
+  border: 1px solid var(--color-grey-300);
+  margin-right: 9px;
+  padding: 0 1rem;
+}
+
+.pagination .item-numbers p {
+  text-align: center;
+}
+
+.pagination .item-numbers img {
+  width: 4.4rem;
+  height: 4rem;
+}
+
+.pagination .page-box {
+  padding: 1rem;
+  border: 1px solid var(--color-grey-300);
+  width: 4.4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
 }
 
 /*Contact Section*/
